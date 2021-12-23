@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Check-in - Room Permissions</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans&display=swap" rel="stylesheet"> 
+    </head>
+  <body>
+
+    <script type="text/javascript">var submitted=false;</script>
+    
+    
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSck_rGh4YdPe4sAvkeayFbWKFws4KJPmC1sZp-mCGLJ8NwBoA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+      <ul>
+       <li>
+         <h1>Check-in Now</h1>
+         <label for="name">Name:</label>
+         <input type="text" id="entry.1604261926" name="entry.1604261926" placeholder="John">
+       </li>
+       <li>
+         <label for="mail">Email:</label>
+         <input type="text" id="entry.525029507" name="entry.525029507" placeholder="someone@example.com">
+       </li>
+       
+       <li class="button">
+        <button type="submit">Check-in</button>
+      </li>
+      </ul>
+      <p>You will have to submit a username and email to Check-in. We need your email to send notifications.</p> 
+     </form>
+     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+      $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('You are successfully checked in.');
+    });
+    </script>
+
+  </body>
+</html> 
+
